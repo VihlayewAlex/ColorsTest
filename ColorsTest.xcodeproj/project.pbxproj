@@ -8,21 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		FA0C4378235323150071C343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C4377235323150071C343 /* AppDelegate.swift */; };
-		FA0C437A235323150071C343 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C4379235323150071C343 /* ContentView.swift */; };
 		FA0C437C235323160071C343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0C437B235323160071C343 /* Assets.xcassets */; };
 		FA0C437F235323160071C343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0C437E235323160071C343 /* Preview Assets.xcassets */; };
 		FA0C4382235323160071C343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0C4380235323160071C343 /* Main.storyboard */; };
+		FA0C438B235323780071C343 /* StripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C438A235323780071C343 /* StripView.swift */; };
+		FA0C439023532FC20071C343 /* ColorsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0C438F23532FC20071C343 /* ColorsBridge.m */; };
+		FA0C43942353304A0071C343 /* colors.c in Sources */ = {isa = PBXBuildFile; fileRef = FA0C43932353304A0071C343 /* colors.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA0C4374235323150071C343 /* ColorsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0C4377235323150071C343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA0C4379235323150071C343 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA0C437B235323160071C343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0C437E235323160071C343 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA0C4381235323160071C343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA0C4383235323160071C343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0C4384235323160071C343 /* ColorsTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ColorsTest.entitlements; sourceTree = "<group>"; };
+		FA0C438A235323780071C343 /* StripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripView.swift; sourceTree = "<group>"; };
+		FA0C438D23532FC20071C343 /* ColorsTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorsTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA0C438E23532FC20071C343 /* ColorsBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorsBridge.h; sourceTree = "<group>"; };
+		FA0C438F23532FC20071C343 /* ColorsBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsBridge.m; sourceTree = "<group>"; };
+		FA0C43922353304A0071C343 /* colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = colors.h; sourceTree = "<group>"; };
+		FA0C43932353304A0071C343 /* colors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = colors.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +62,10 @@
 		FA0C4376235323150071C343 /* ColorsTest */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C43912353302E0071C343 /* Colors */,
+				FA0C438C23532F7B0071C343 /* ColorsBridge */,
 				FA0C4377235323150071C343 /* AppDelegate.swift */,
-				FA0C4379235323150071C343 /* ContentView.swift */,
+				FA0C438A235323780071C343 /* StripView.swift */,
 				FA0C437B235323160071C343 /* Assets.xcassets */,
 				FA0C4380235323160071C343 /* Main.storyboard */,
 				FA0C4383235323160071C343 /* Info.plist */,
@@ -72,6 +81,25 @@
 				FA0C437E235323160071C343 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA0C438C23532F7B0071C343 /* ColorsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C438E23532FC20071C343 /* ColorsBridge.h */,
+				FA0C438F23532FC20071C343 /* ColorsBridge.m */,
+				FA0C438D23532FC20071C343 /* ColorsTest-Bridging-Header.h */,
+			);
+			path = ColorsBridge;
+			sourceTree = "<group>";
+		};
+		FA0C43912353302E0071C343 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C43922353304A0071C343 /* colors.h */,
+				FA0C43932353304A0071C343 /* colors.c */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +134,7 @@
 				TargetAttributes = {
 					FA0C4373235323150071C343 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -145,8 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0C437A235323150071C343 /* ContentView.swift in Sources */,
 				FA0C4378235323150071C343 /* AppDelegate.swift in Sources */,
+				FA0C439023532FC20071C343 /* ColorsBridge.m in Sources */,
+				FA0C438B235323780071C343 /* StripView.swift in Sources */,
+				FA0C43942353304A0071C343 /* colors.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ColorsTest/ColorsTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -296,6 +328,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = vihlayew.ColorsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorsTest/ColorsBridge/ColorsTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -304,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ColorsTest/ColorsTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -319,6 +354,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = vihlayew.ColorsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorsTest/ColorsBridge/ColorsTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
